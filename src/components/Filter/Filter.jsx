@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export const Filter = ({ onChange }) => {
     const handleChange = e => {
         e.preventDefault();
@@ -13,3 +15,7 @@ export const Filter = ({ onChange }) => {
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
             onChange={handleChange} /></label>)
 }
+
+Filter.propTypes = {
+  onChange: PropTypes.func.isRequired
+};
